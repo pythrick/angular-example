@@ -1,0 +1,16 @@
+<div class="card-group">
+  <div class="col-md-3 d-flex align-items-stretch" *ngFor="let post of posts">
+      <div class="card">
+        <a routerLink="/posts/{{post.id}}">
+          <img class="card-img-top" src="https://picsum.photos/200/300/?image={{post.id}}" alt="{{post.title}}">
+        </a>
+        <div class="card-body">
+          <a routerLink="/posts/{{post.id}}">
+            <h5 class="card-title">{{post.title}}</h5>
+          </a>
+          <p class="card-text">{{post.body}}</p>
+          <p class="card-text"><small class="text-muted">Posted 2 days ago</small></p>
+        </div>
+      </div>
+  </div>
+</div>
